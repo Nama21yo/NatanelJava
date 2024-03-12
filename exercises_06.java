@@ -120,10 +120,10 @@ public static void main(String[] args) {
       System.out.println("Enter a Valid Number");
     }
     else {
-      int lastDigit = n % 10;
-      int thirdDigit = (n/10) % 10;
-      int secondDigit = (n/100) % 10;
-      int firstDigit = (n/1000) % 10;
+      int lastDigit = n % 10;//9
+      int thirdDigit = (n/10) % 10;//1
+      int secondDigit = (n/100) % 10;//7
+      int firstDigit = (n/1000) % 10;//3
   
       if (firstDigit+secondDigit==thirdDigit+lastDigit) 
         System.out.println("It is Lucky Number");
