@@ -201,7 +201,7 @@ class exercise_12 {
         System.out.print(reverse);
     }
   }
-  // Write a program which finds if a string is palindrome string or not (noon)
+   // Write a program which finds if a string is palindrome string or not (noon)
   class exercise_17 {
    public static void main(String[] args) {
         System.out.print("Enter a String: ");

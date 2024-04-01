@@ -293,3 +293,151 @@ class ForTick2 {
     System.out.println("tick " + n);
  }
 }
+
+
+// Using the comma.
+class Comma {
+ public static void main(String[] args) {
+ int a, b;
+ for(a=1, b=4; a<b; a++, b--) {
+ System.out.println("a = " + a);
+ System.out.println("b = " + b);
+ }
+ }
+}
+
+// Parts of the for loop can be empty
+class ForVar {
+  public static void main(String[] args) {
+    int i = 0;
+    boolean done = false;
+    for(;!done;){
+      if(i==10) done = true;
+      System.out.println(i);
+      i++;
+    }
+  }
+}
+
+// For Each Version
+class foreachs {
+  public static void main(String[] args) {
+    int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    // for(int i=0; i < 10; i++) System.out.print(nums[i] + " ");;
+
+    for(int x:nums) System.out.print(x + " ");;
+
+  }
+}
+
+// Use a for-each style for loop.
+class ForEach {
+ public static void main(String[] args) {
+ int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+ int sum = 0;
+ // use for-each style for to display and sum the values
+ for(int x : nums) {
+ System.out.println("Value is: " + x);
+ sum += x;
+ }
+ System.out.println("Summation: " + sum);
+ }
+}
+//Enumerate in a For Each
+class enumerate {
+  public static void main(String[] args) {
+    int[] arr= {5,2,2,0};
+    int i = 0;
+    for(int item : arr) {
+      System.out.println(item + " " + i++);
+      // System.out.println(i);
+      // i++;
+    }
+  }
+}
+// The for-each loop is essentially read-only.
+class NoChange {
+ public static void main(String[] args) {
+ int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+ for(int x: nums) {
+ System.out.print(x + " ");
+ x = x * 10; // no effect on nums
+ }
+ System.out.println();
+ for(int x : nums)
+ System.out.print(x + " ");
+ System.out.println();
+ }
+}
+
+// Use for-each style for on a two-dimensional array.
+class ForEach3 {
+ public static void main(String[] args) {
+ int sum = 0;
+ int[][] nums = new int[3][5];
+ // give nums some values
+ for(int i = 0; i < 3; i++)
+  for(int j = 0; j < 5; j++)
+    nums[i][j] = (i+1)*(j+1);
+ // use for-each for to display and sum the values
+ for(int[] x : nums) {
+    for(int y : x) {
+      System.out.println("Value is: " + y);
+      sum += y;
+    }
+ }
+ System.out.println("Summation: " + sum);
+ }
+}
+
+// Use type inference in a for loop.
+class TypeInferenceInFor {//using the var
+ public static void main(String[] args) {
+ // Use type inference with the loop control variable.
+ System.out.print("Values of x: ");
+ for(var x = 2.5; x < 100.0; x = x * 2)
+ System.out.print(x + " ");
+ System.out.println();
+ // Use type inference with the iteration variable.
+ int[] nums = { 1, 2, 3, 4, 5, 6};
+ System.out.print("Values in nums array: ");
+ for(var v : nums)
+ System.out.print(v + " ");
+ System.out.println();
+ }
+}
+
+//? Jump Statements
+// Using break as a civilized form of goto.
+class Break {
+ public static void main(String[] args) {
+ boolean t = true;
+ first: {
+    second: {
+      third: {
+          System.out.println("Before the break.");
+          if(t) break second; // break out of second block
+          System.out.println("This won't execute");
+      }
+      System.out.println("This won't execute");
+      }
+  System.out.println("This is after second block.");
+ }
+ }
+}
+
+// Using continue with a label.
+class ContinueLabel {
+ public static void main(String[] args) {
+outer: for (int i=0; i<10; i++) {
+          for(int j=0; j<10; j++) {
+              if(j > i) {
+              System.out.println();
+              continue outer;
+              }
+              System.out.print(" " + (i * j));
+          }
+ }
+ System.out.println();
+ }
+}
