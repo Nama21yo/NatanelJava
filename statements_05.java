@@ -1,3 +1,4 @@
+import java.util.Scanner;
 class ifElse1 {
   // For only One statement
   public static void main(String[] args) {
@@ -167,7 +168,41 @@ class StringSwitch {
       //Output: two
  }
 }
+//8. Consider a bank(Java in 2 Semesters)
+class bank {
+  public static void main(String[] args) {
+     Scanner input = new Scanner(System.in);
+     System.out.print("Enter Your Account: ");
+     String Account = input.nextLine();
+     System.out.print("Enter Your Amount of Money: ");
+     int money = input.nextInt();
+     int amount; 
 
+     switch(Account) {
+      case "A":
+      case "a":
+      case "C":
+      case "c":
+        amount = (int)(money*1.5) + money;
+        break;
+      case "B":
+      case "b":
+        amount = (int)(money*2) + money;
+        break;
+      case "X":
+      case "x":
+        amount = (int)(money*5) + money;
+        break;
+      default:
+        System.out.println("No match Found");
+        break;
+     }
+     System.out.print("You Earned " );
+    //  System.out.println(amount);
+
+
+  }
+}
 // Ternary Operators
 class ternary {
   public static void main(String[] args) {
