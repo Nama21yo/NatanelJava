@@ -188,7 +188,7 @@ public static void main (String[] args)
             }
             } while (choice != '7');
                 System.out.println("Goodbye");
-            }
+           }
             // additional methods
             // fills an array with values
         static void fillArray(int[] arrayIn)

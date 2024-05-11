@@ -1,0 +1,19 @@
+The first thing to understand about strings is that every string you create is actually 
+an object of type String. Even string constants are actually String objects. For example, 
+in the statement
+System.out.println("This is a String, too");
+the string "This is a String, too" is a String object.
+The second thing to understand about strings is that objects of type String are immutable; 
+once a String object is created, its contents cannot be altered. While this may seem like a 
+serious restriction, it is not, for two reasons:
+•	 If you need to change a string, you can always create a new one that contains the 
+modifications.
+•	 Java defines peer classes of String, called StringBuffer and StringBuilder, which 
+allow strings to be altered, so all of the normal string manipulations are still available 
+in Java. (StringBuffer and StringBuilder are described in Part II of this book.)
+
+//
+The String class contains several methods that you can use. Here are a few. You can test 
+two strings for equality by using equals( ). You can obtain the length of a string by calling the 
+length( ) method. You can obtain the character at a specified index within a string by calling 
+charAt( ).

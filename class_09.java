@@ -44,7 +44,7 @@ public class class_09 {
 //! The above code is troubling for two reasons. First, it is clumsy and error prone. For example, it would be easy to forget to set a dimension. Second, in well-designed Java programs, instance variables should be accessed only through methods defined by their class. In the future, you can change the behavior of a method, but you can’t change the behavior of an exposed instance variable.
 //TODO- A better approach to setting the dimensions of a box is to create a method that takes the dimensions of a box in its parameters and sets each instance variable appropriately.
 // This program uses a parameterized method.
-class Box {
+class Boxss {
   //creating Instance Variables
  double width;
  double height;
@@ -62,8 +62,8 @@ class Box {
 }
 class BoxDemo5 {
  public static void main(String[] args) {
- Box mybox1 = new Box();
- Box mybox2 = new Box();
+ Boxss mybox1 = new Boxss();
+ Boxss mybox2 = new Boxss();
  double vol;
  // initialize each box
  mybox1.setDim(10, 20, 15);
